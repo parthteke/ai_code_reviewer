@@ -1,8 +1,8 @@
 from app.ingestion.github_client import fetch_pr, fetch_pr_files
 
-OWNER = "octocat"
-REPO = "Hello-World"
-PR_NUMBER = 1  # or real PR
+OWNER = "fastapi"
+REPO = "fastapi"
+PR_NUMBER = 15025  # or real PR
 
 def main():
     pr_data = fetch_pr(OWNER, REPO, PR_NUMBER)
