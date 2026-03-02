@@ -1,0 +1,30 @@
+{
+  "pr_metadata": {
+    "title": "string",
+    "author": "string",
+    "base_branch": "string",
+    "head_branch": "string"
+  },
+  "summary": {
+    "total_issues": "integer",
+    "critical_count": "integer",
+    "high_count": "integer",
+    "medium_count": "integer",
+    "low_count": "integer",
+    "overall_risk_score": "float (0-10)"
+  },
+  "issues": [
+    {
+      "file": "string",
+      "line_number": "integer",
+      "issue_type": "Bug | Security | Style | Performance | Maintainability",
+      "severity": "Low | Medium | High | Critical",
+      "confidence": "float (0-1)",
+      "title": "short issue title",
+      "description": "detailed explanation of the issue",
+      "impact": "why this matters",
+      "suggested_fix": "string",
+      "suggested_patch": "unified diff format string"
+    }
+  ]
+}
