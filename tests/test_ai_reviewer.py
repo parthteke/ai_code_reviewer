@@ -2,10 +2,11 @@ import json
 from app.ingestion.github_client import fetch_pr_files
 from app.diff_parser.parser import parse_patch
 from app.analysis.change_summarizer import summarize_changes
+from app.analysis.ai_reviewer import review_changes
 
 OWNER = "fastapi"
 REPO = "fastapi"
-PR_NUMBER = 15088 # real PR number
+PR_NUMBER = 1  # real PR
 
 
 def main():
@@ -18,11 +19,11 @@ def main():
         parsed = parse_patch(file["filename"], file["patch"])
         summarized = summarize_changes(parsed)
 
-        print("\n==== SUMMARIZED OUTPUT ====")
-        print(json.dumps(summarized, indent=4))
+        result = review_changes(summarized)
+
+        print("\n==== AI REVIEW RESULT ====")
+        print(json.dumps(result, indent=4))
 
 
 if __name__ == "__main__":
     main()
-
-    
