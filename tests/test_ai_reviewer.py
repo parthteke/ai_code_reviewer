@@ -4,9 +4,9 @@ from app.diff_parser.parser import parse_patch
 from app.analysis.change_summarizer import summarize_changes
 from app.analysis.ai_reviewer import review_changes
 
-OWNER = "fastapi"
-REPO = "fastapi"
-PR_NUMBER = 1  # real PR
+OWNER = "mattpocock"
+REPO = "skills"
+PR_NUMBER = 8  # real PR
 
 
 def main():
